@@ -28,8 +28,17 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 .responsive-two-column-grid > * {padding:1rem;}
 @media (min-width:768px) { .responsive-two-column-grid { display: grid; grid-template-columns: 1fr 1fr; } }
 
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 /* -----------------------------HERO---------------------------------- */
-.hero{background: url('./Assets/hero-bg.png') center center/cover no-repeat; }
+.hero{background: url('https://www2.deloitte.com/content/dam/html/il/2023/tax-landing-page/pov%20cover.mp4') center center/cover no-repeat; position: relative;}
 
 @keyframes fade-in-forward { 0% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
 @keyframes fade-in-bottom { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
@@ -69,13 +78,13 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   }
 } 
 /* ----------------------------videos------------------------------------------ */
-.video__card--fullwidth{ padding: 1rem; }
+.video__card--fullwidth{ padding: 0rem; margin-bottom: 2rem;}
 .video__card--fullwidth p{ padding-left: 20%; }
 @media screen and (max-width: 768px) {.video__card--fullwidth p{ padding-left: 0%; } } 
 
 /* ----------------------------articles------------------------------------------ */
 .responsive-three-columns { display:flex; flex-wrap:wrap;}
-.responsive-three-columns > * { width:100%; padding:1rem; }
+.responsive-three-columns > * { width:100%; }
 @media (min-width:768px) { .responsive-three-columns > * { width:calc(100% / 3); } }
 
 /* ----------------------------articles------------------------------------------ */
@@ -86,6 +95,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
   text-align: center;
   max-width: 300px;
   margin: auto;
+  padding-bottom: 4rem;
 }
 .articles__img{width: 100%;}
 .articles__heading{
@@ -96,6 +106,11 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 .articles__card h4{
   padding: 1rem 0rem 0.5rem 0rem;
 }
+@media screen and (max-width: 768px) { 
+  .articles__card{
+    padding-bottom: 4rem;
+  }
+} 
 
 
 /* ----------------------------profiles------------------------------------------ */
@@ -109,4 +124,3 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 .profiles__card h5{ font-size: 1.75rem;}
 .profiles__card p{ width: 60%; margin: auto;}
 @media screen and (max-width: 768px) { .profiles__card p{ width: 80%;} } 
-
