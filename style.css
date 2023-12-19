@@ -1,0 +1,112 @@
+* { box-sizing: border-box;}
+html{scroll-behavior: smooth; }
+body { font-family: "Open Sans", "Arial", sans-serif; font-size: 1.125rem; margin: 0; direction: rtl; color: #ffffff;  background-color: #000000;}
+/* html fragment fix padding */
+.aem-GridColumn { padding: 0px; }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin: 0; }
+
+@media screen and (max-width: 768px) { } 
+
+/* -----------------------------HELPERS---------------------------------- */
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+a:focus, a:hover { text-decoration: none; }
+button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; overflow: visible; -webkit-font-smoothing: inherit; -moz-osx-font-smoothing: inherit; -webkit-appearance: none; }
+.container{ max-width: 1200px; margin: 0 auto; padding: 0rem 1rem;}
+
+.flex-center{display: flex; justify-content: end; align-items: center; flex-direction: column;}
+
+/*two-column-grid */
+.responsive-two-column-grid {display:block;}
+.responsive-two-column-grid > * {padding:1rem;}
+@media (min-width:768px) { .responsive-two-column-grid { display: grid; grid-template-columns: 1fr 1fr; } }
+
+/* -----------------------------HERO---------------------------------- */
+.hero{background: url('./Assets/hero-bg.png') center center/cover no-repeat; }
+
+@keyframes fade-in-forward { 0% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes fade-in-bottom { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
+
+.hero__img { animation: fade-in-forward 1.3s ease 0s 1 normal forwards; padding: 2rem 1rem; display: flex; justify-content: center; align-items: center; }
+.hero__img img{width: 100%;}
+.hero__lockup { text-align: left; display: flex; flex-direction: column; justify-content: center; align-items: end; animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;}
+.hero__lockup > h1{ font-size: 3rem; }
+
+.hero__heading--1{color: #86BC25}
+.hero__heading--1, .hero__heading--2{ font-weight: 300; }
+.hero__heading--2{margin-bottom: 1rem;}
+.hero__heading--3{border-top: 1px solid white; padding-top: 1rem;}
+@media screen and (max-width: 768px) {
+  .hero{padding-bottom: 2rem;}
+  .hero__lockup { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+  .hero__lockup > h1{text-align: center; font-size: 2.125rem;}
+  .hero__img{padding-bottom: 0rem;}
+}
+
+
+/* ----------------------------sub-title------------------------------------------ */
+.sub-title{
+  padding: 4rem 0rem;
+}
+.sub-title__heading{
+  animation: fade-in-forward 1.3s ease 0s 1 normal forwards;
+  text-align: right;
+  font-weight: 500;
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) { 
+  .sub-title__heading{
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+} 
+/* ----------------------------videos------------------------------------------ */
+.video__card--fullwidth{ padding: 1rem; }
+.video__card--fullwidth p{ padding-left: 20%; }
+@media screen and (max-width: 768px) {.video__card--fullwidth p{ padding-left: 0%; } } 
+
+/* ----------------------------articles------------------------------------------ */
+.responsive-three-columns { display:flex; flex-wrap:wrap;}
+.responsive-three-columns > * { width:100%; padding:1rem; }
+@media (min-width:768px) { .responsive-three-columns > * { width:calc(100% / 3); } }
+
+/* ----------------------------articles------------------------------------------ */
+.articles{
+  padding: 4rem 0rem;
+}
+.articles__card{
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+}
+.articles__img{width: 100%;}
+.articles__heading{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.articles__heading span{color: #86BC25;}
+.articles__card h4{
+  padding: 1rem 0rem 0.5rem 0rem;
+}
+
+
+/* ----------------------------profiles------------------------------------------ */
+
+.profiles{padding: 4rem 0rem;}
+.profiles__heading{  text-align: center; margin-bottom: 1rem;}
+.profiles__heading span{  color: #86BC25;}
+
+.profiles__card{ text-align: center; }
+.profiles__card img{ width: 60%; margin: auto;}
+.profiles__card h5{ font-size: 1.75rem;}
+.profiles__card p{ width: 60%; margin: auto;}
+@media screen and (max-width: 768px) { .profiles__card p{ width: 80%;} } 
+
