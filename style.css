@@ -38,15 +38,13 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 .hero{ position: relative; overflow: hidden;}
 
 
-
 @keyframes fade-in-forward { 0% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
 @keyframes fade-in-bottom { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
 
-.hero__img { animation: fade-in-forward 1.3s ease 0s 1 normal forwards; padding: 2rem 1rem; display: flex; justify-content: center; align-items: center; }
+.hero__img { animation: fade-in-forward 1.3s ease 0s 1 normal forwards; padding: 0rem 1rem; display: flex; justify-content: center; align-items: center; }
 .hero__img img{width: 100%;}
-.hero__lockup { text-align: left; display: flex; flex-direction: column; justify-content: center; align-items: end; animation: fade-in-bottom 1.3s ease 0s 1 normal forwards;}
+.hero__lockup { text-align: left; display: flex; flex-direction: column; justify-content: center; align-items: end; animation: fade-in-bottom 1.3s ease 0s 1 normal forwards; padding: 0rem;}
 .hero__lockup > h1{ font-size: 3rem; }
-
 .hero__heading--1{color: #86BC25}
 .hero__heading--1, .hero__heading--2{ font-weight: 300; }
 .hero__heading--2{margin-bottom: 1rem;}
@@ -60,26 +58,22 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 
 
 /* ----------------------------sub-title------------------------------------------ */
-.sub-title{
-  padding: 4rem 0rem;
-}
-.sub-title__heading{
-  animation: fade-in-forward 1.3s ease 0s 1 normal forwards;
-  text-align: right;
-  font-weight: 500;
-  line-height: 1.6;
-  font-size: 1.5rem;
-}
-@media screen and (max-width: 768px) { 
-  .sub-title__heading{
-    font-weight: 500;
-    font-size: 1.125rem;
-  }
-} 
+.sub-title{ padding: 4rem 0rem; }
+@media screen and (max-width: 768px) { .sub-title{ padding: 2rem 0rem 2rem 0rem;}} 
+.sub-title__heading{ animation: fade-in-forward 1.3s ease 0s 1 normal forwards; text-align: right; font-weight: 500; line-height: 1.6; font-size: 1.5rem; }
+@media screen and (max-width: 768px) { .sub-title__heading{ font-weight: 500; font-size: 1.125rem; text-align: center;} } 
+
 /* ----------------------------videos------------------------------------------ */
-.video__card--fullwidth{ padding: 0rem; margin-bottom: 2rem;}
-.video__card--fullwidth p{ padding-left: 20%; }
-@media screen and (max-width: 768px) {.video__card--fullwidth p{ padding-left: 0%; } } 
+.videos{margin-bottom: 5rem;}
+.video__card--fullwidth h3{ margin: 1.5rem 0rem .5rem 0rem; }
+@media screen and (max-width: 768px) { .video__card--fullwidth h3{ margin: 0rem 0rem .5rem 0rem; }} 
+.video__card--fullwidth h3 {font-size: 1.6rem;}
+.video__card--fullwidth h3 span{color: #86BC25;}
+.video__card--fullwidth p{font-size: 1.25rem;}
+@media screen and (max-width: 768px) { 
+.video__card--fullwidth {text-align: center;}
+
+} 
 
 /* ----------------------------articles------------------------------------------ */
 .responsive-three-columns { display:flex; flex-wrap:wrap;}
@@ -87,37 +81,20 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 @media (min-width:768px) { .responsive-three-columns > * { width:calc(100% / 3); } }
 
 /* ----------------------------articles------------------------------------------ */
-.articles{
-  padding: 4rem 0rem;
-}
-.articles__card{
-  text-align: center;
-  max-width: 300px;
-  margin: auto;
-  padding-bottom: 4rem;
-}
+.articles{ margin-bottom: 5rem; }
+.articles__card{ transition: transform .3s; /* Animation */ text-align: center; max-width: 300px; margin: auto; padding-bottom: 4rem; }
 .articles__img{width: 100%;}
-.articles__heading{
-  text-align: center;
-  margin-bottom: 1rem;
-}
+.articles__heading{ text-align: center; margin-bottom: 3rem; font-size: 2rem; }
 .articles__heading span{color: #86BC25;}
-.articles__card h4{
-  padding: 1rem 0rem 0.5rem 0rem;
-}
-@media screen and (max-width: 768px) { 
-  .articles__card{
-    padding-bottom: 4rem;
-  }
-} 
-
-
+.articles__card h4{ padding: 1rem 0rem 0.5rem 0rem; }
+@media screen and (max-width: 768px) { .articles__card{ padding-bottom: 4rem; } } 
+.articles__card:hover { transform: scale(1.04); }
 /* ----------------------------profiles------------------------------------------ */
 
-.profiles{padding: 4rem 0rem;}
-.profiles__heading{  text-align: center; margin-bottom: 1rem;}
+.profiles{padding-bottom: 5rem;}
+.profiles__heading{  text-align: center; margin-bottom: 0.5rem; font-size: 2rem;}
 .profiles__heading span{  color: #86BC25;}
-
+.profiles__sub-heading{text-align: center;}
 .profiles__card{ text-align: center; }
 .profiles__card img{ width: 60%; margin: auto;}
 .profiles__card h5{ font-size: 1.75rem;}
