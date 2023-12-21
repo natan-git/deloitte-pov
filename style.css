@@ -35,7 +35,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 #myVideo { position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; object-fit: cover; }
 @media screen and (max-width: 768px) { #myVideo { position: absolute; right: 0; bottom: 0; max-width: 100%; max-height: 100%; object-fit: cover; } } 
 /* .hero{background: url('https://www2.deloitte.com/content/dam/html/il/2023/tax-landing-page/pov%20cover.mp4') center center/cover no-repeat; position: relative;} */
-.hero{ position: relative; overflow: hidden;}
+.hero{ position: relative; overflow: hidden; }
 
 
 @keyframes fade-in-forward { 0% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
@@ -64,7 +64,7 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 @media screen and (max-width: 768px) { .sub-title__heading{ font-weight: 500; font-size: 1.125rem; text-align: center;} } 
 
 /* ----------------------------videos------------------------------------------ */
-.videos{margin-bottom: 5rem;}
+.videos{margin-bottom: 6rem;}
 .video__card--fullwidth h3{ margin: 1.5rem 0rem .5rem 0rem; }
 @media screen and (max-width: 768px) { .video__card--fullwidth h3{ margin: 0rem 0rem .5rem 0rem; }} 
 .video__card--fullwidth h3 {font-size: 1.6rem;}
@@ -81,7 +81,10 @@ button{ border: none; margin: 0; padding: 10px 25px 10px 25px; width: auto; over
 @media (min-width:768px) { .responsive-three-columns > * { width:calc(100% / 3); } }
 
 /* ----------------------------articles------------------------------------------ */
-.articles{ margin-bottom: 5rem; }
+.articles{ margin-bottom: 4rem; }
+@media screen and (max-width: 768px) { .articles{ margin-bottom: 3rem; }
+} 
+
 .articles__card{ transition: transform .3s; /* Animation */ text-align: center; max-width: 300px; margin: auto; padding-bottom: 4rem; }
 .articles__img{width: 100%;}
 .articles__heading{ text-align: center; margin-bottom: 3rem; font-size: 2rem; }
